@@ -8,6 +8,7 @@ window.geometry('1580x850+200+90')
 window.minsize(1580, 850)
 window.maxsize(1580, 850)
 window.title('les jarres')
+# window.config(background='#a41f1f')
 window.config(background='#a41f1f')
 
 # ajout d'une frame
@@ -22,7 +23,7 @@ regle.pack()
 
 frame.pack()
 
-
+# ajout d'un bouton
 button_OK = Button(window, text="OK", background='black', font=('Arial', 15), fg='#a41f1f', relief='raised', cursor='circle')
 button_OK.pack(expand=YES)
 
