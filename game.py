@@ -58,12 +58,4 @@ def jeu():
                 else:
                     print('tu as ' + str(nbr_cle) + 'cle')
 
-
-
-
-
 jeu()
-
-
-
-
