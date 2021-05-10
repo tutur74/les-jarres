@@ -1,5 +1,6 @@
 # coding: utf-8
 from Tkinter import *
+from functools import partial
 
 
 # creer le fenetre
@@ -8,11 +9,10 @@ window.geometry('1580x850+200+90')
 window.minsize(1580, 850)
 window.maxsize(1580, 850)
 window.title('les jarres')
-# window.config(background='#a41f1f')
 window.config(background='#a41f1f')
 
 # ajout d'une frame
-frame = Frame(window, bg='#a41f1f', )
+frame = Frame(window, bg='#a41f1f')
 
 # ajouter les écritures
 bienvenue = Label(frame, text='Bienvenue dans le jeu des jarres', background='#a41f1f', font=('courrier', 30))
@@ -25,8 +25,6 @@ frame.pack(expand=YES)
 
 
 '''choisir son niveau'''
-
-
 
 
 def niveau():
@@ -78,7 +76,9 @@ def passage_a_Niveau():
     niveau()
 
 # ajout d'un bouton
-button_OK = Button(window, text="OK", background='black', font=('Arial', 15), fg='#a41f1f', relief='raised', cursor='circle', command=lambda: passage_a_Niveau(1))
+button_OK = Button(window, text="OK", background='black', font=('Arial', 15), fg='#a41f1f', relief='raised',
+                   cursor='circle', command=partial(passage_a_Niveau))
 button_OK.pack(expand=YES)
+
 
 window.mainloop()
