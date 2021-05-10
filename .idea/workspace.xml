@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="51252f58-c0f2-4ddf-940f-3757958023bc" name="Default Changelist" comment="">
+    <list default="true" id="51252f58-c0f2-4ddf-940f-3757958023bc" name="Default Changelist" comment="v8">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/niveau.py" beforeDir="false" afterPath="$PROJECT_DIR$/niveau.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/porte.py" beforeDir="false" afterPath="$PROJECT_DIR$/porte.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,8 +187,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.niveau (1)" />
         <item itemvalue="Python.porte (1)" />
+        <item itemvalue="Python.niveau (1)" />
         <item itemvalue="Python.game" />
         <item itemvalue="Python.tresor (1)" />
       </list>
@@ -203,6 +203,14 @@
       <option name="presentableId" value="Default" />
       <updated>1619945335270</updated>
     </task>
+    <task id="LOCAL-00001" summary="v8">
+      <created>1620653410072</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1620653410072</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -228,5 +236,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="v8" />
+    <option name="LAST_COMMIT_MESSAGE" value="v8" />
   </component>
 </project>

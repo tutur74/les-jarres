@@ -12,11 +12,11 @@ window.title('les jarres')
 window.config(background='#a41f1f')
 
 # ajouter les écritures
-bienvenue = Label(window, text='choisissez votre niveau', background='#a41f1f', font=('courrier', 30))
-bienvenue.pack()
+bienvenue_2 = Label(window, text='choisissez votre niveau', background='#a41f1f', font=('courrier', 30))
+bienvenue_2.pack()
 
 # ajout d'une frame
-group_image = Frame(window, bg='#a41f1f', bd=1 , relief=SUNKEN)
+group_image = Frame(window, bg='#a41f1f')
 
 # ajouter des images
 image_jarre_1 = PhotoImage(file="image/porte.gif").subsample(1)
