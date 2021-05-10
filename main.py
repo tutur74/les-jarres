@@ -71,7 +71,7 @@ canvas_3.create_image(00, 00, anchor=NW, image=sueur)
 
 
 # ajouter les écritures
-bienvenue_2 = Label(window, text='choisissez votre niveau', background='#a41f1f', font=('courrier', 30))
+choisir_porte = Label(window, text='choisissez une porte', background='#a41f1f', font=('courrier', 30))
 
 
 # ajout d'une frame
@@ -80,27 +80,27 @@ group_image_2 = Frame(window, bg='#a41f1f')
 
 # ajouter des images
 image_jarre_1 = PhotoImage(file="image/porte.gif").subsample(1)
-canvas_2_1 = Canvas(group_image, width=220, height=300, bg="#a41f1f", bd=0, highlightthickness=0)
+canvas_2_1 = Canvas(group_image_2, width=220, height=300, bg="#a41f1f", bd=0, highlightthickness=0)
 canvas_2_1.create_image(00, 00, anchor=NW, image=image_jarre_1)
 
 
 image_jarre_2 = PhotoImage(file="image/porte.gif").subsample(1)
-canvas_2_2 = Canvas(group_image, width=220, height=300, bg="#a41f1f", bd=0, highlightthickness=0)
+canvas_2_2 = Canvas(group_image_2, width=220, height=300, bg="#a41f1f", bd=0, highlightthickness=0)
 canvas_2_2.create_image(00, 00, anchor=NW, image=image_jarre_2)
 
 
 image_jarre_3 = PhotoImage(file="image/porte.gif").subsample(1)
-canvas_2_3 = Canvas(group_image, width=210, height=300, bg="#a41f1f", bd=0, highlightthickness=0)
+canvas_2_3 = Canvas(group_image_2, width=210, height=300, bg="#a41f1f", bd=0, highlightthickness=0)
 canvas_2_3.create_image(00, 00, anchor=NW, image=image_jarre_3)
 
 
 image_jarre_4 = PhotoImage(file="image/porte.gif").subsample(1)
-canvas_2_4 = Canvas(group_image, width=210, height=300, bg="#a41f1f", bd=0, highlightthickness=0)
+canvas_2_4 = Canvas(group_image_2, width=210, height=300, bg="#a41f1f", bd=0, highlightthickness=0)
 canvas_2_4.create_image(00, 00, anchor=NW, image=image_jarre_4)
 
 
 image_jarre_5 = PhotoImage(file="image/porte.gif").subsample(1)
-canvas_2_5 = Canvas(group_image, width=220, height=300, bg="#a41f1f", bd=0, highlightthickness=0)
+canvas_2_5 = Canvas(group_image_2, width=220, height=300, bg="#a41f1f", bd=0, highlightthickness=0)
 canvas_2_5.create_image(00, 00, anchor=NW, image=image_jarre_5)
 
 
@@ -131,7 +131,7 @@ jarre_5 = Button(window, text="porte 5", background='black', font=('Arial', 15),
 
 
 
-def passage_a_porte():
+def passage_a_porte_1():
     choisir_niveau.destroy()
     canvas.destroy()
     canvas_2.destroy()
@@ -141,7 +141,55 @@ def passage_a_porte():
     niveau_2.destroy()
     niveau_3.destroy()
     group_bouton.destroy()
-    bienvenue_2.pack()
+    choisir_porte.pack()
+    canvas_2_1.pack(side='left', padx='40')
+    canvas_2_2.pack(side='left', padx='40')
+    canvas_2_3.pack(side='left', padx='40')
+    canvas_2_4.pack(side='left', padx='40')
+    canvas_2_5.pack(side='left', padx='40')
+    group_image_2.pack(pady='110', padx='80')
+    jarre_1.pack(side='left', padx='150')
+    jarre_2.pack(side='left', padx='70')
+    jarre_3.pack(side='left', padx='140')
+    jarre_4.pack(side='left', padx='100')
+    jarre_5.pack(side='left', padx='100')
+    group_bouton_2.pack(side='left')
+
+def passage_a_porte_2():
+    choisir_niveau.destroy()
+    canvas.destroy()
+    canvas_2.destroy()
+    canvas_3.destroy()
+    group_image.destroy()
+    niveau_1.destroy()
+    niveau_2.destroy()
+    niveau_3.destroy()
+    group_bouton.destroy()
+    choisir_porte.pack()
+    canvas_2_1.pack(side='left', padx='40')
+    canvas_2_2.pack(side='left', padx='40')
+    canvas_2_3.pack(side='left', padx='40')
+    canvas_2_4.pack(side='left', padx='40')
+    canvas_2_5.pack(side='left', padx='40')
+    group_image_2.pack(pady='110', padx='80')
+    jarre_1.pack(side='left', padx='150')
+    jarre_2.pack(side='left', padx='70')
+    jarre_3.pack(side='left', padx='140')
+    jarre_4.pack(side='left', padx='100')
+    jarre_5.pack(side='left', padx='100')
+    group_bouton_2.pack(side='left')
+
+def passage_a_porte_3():
+    choisir_niveau.destroy()
+    canvas.destroy()
+    canvas_2.destroy()
+    canvas_3.destroy()
+    group_image.destroy()
+    niveau_1.destroy()
+    niveau_2.destroy()
+    niveau_3.destroy()
+    group_bouton.destroy()
+    choisir_porte.pack()
     canvas_2_1.pack(side='left', padx='40')
     canvas_2_2.pack(side='left', padx='40')
     canvas_2_3.pack(side='left', padx='40')
@@ -160,15 +208,15 @@ def passage_a_porte():
 group_bouton = Frame(window, bg='#a41f1f')
 
 niveau_1 = Button(window, text="niveau 1", background='black', font=('Arial', 15), fg='#a41f1f', relief='raised',
-                  cursor='circle', command=partial(passage_a_porte))
+                  cursor='circle', command=partial(passage_a_porte_1))
 
 
 niveau_2 = Button(window, text="niveau 2", background='black', font=('Arial', 15), fg='#a41f1f', relief='raised',
-                  cursor='circle', command=partial(passage_a_porte))
+                  cursor='circle', command=partial(passage_a_porte_2))
 
 
 niveau_3 = Button(window, text="niveau 3", background='black', font=('Arial', 15), fg='#a41f1f', relief='raised',
-                  cursor='circle', command=partial(passage_a_porte))
+                  cursor='circle', command=partial(passage_a_porte_3))
 
 
 
