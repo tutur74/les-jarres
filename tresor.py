@@ -24,7 +24,7 @@ regle.pack()
 # ajout d'un bouton
 tresor = PhotoImage(file="image/tresor.gif").subsample(1)
 canvas = Canvas(frame, width=550, height=510, bg="#a41f1f", bd=0, highlightthickness=0)
-canvas.create_image(00, 00, anchor=NW, image=tresor)
+canvas.create_image(00, 00, anchor=NW, width=450, height=220, image=tresor)
 canvas.pack(side='right')
 
 frame.pack(expand=YES)

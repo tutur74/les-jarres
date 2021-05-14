@@ -55,8 +55,6 @@ while nbr_cle != 3:
 
     # ajouter les écritures
     choisir_porte = Label(window, text='choisissez une porte', background='#a41f1f', font=('courrier', 30))
-    bravo = Label(window, text='Bravo', background='#a41f1f', font=('courrier', 30))
-    per = Label(window, text='Bravo', background='#a41f1f', font=('courrier', 30))
 
     # ajout d'une frame
     group_image_2 = Frame(window, bg='#a41f1f')
@@ -83,74 +81,215 @@ while nbr_cle != 3:
     canvas_2_5.create_image(00, 00, anchor=NW, image=image_jarre_5)
 
 
-    '''random1 = random.randint(1, 5)
-    random2 = random.randint(1, 5)
-    random3 = random.randint(1, 5)
 
-    while random2 == random1:
-        random2 = random.randint(1, 5)
+    '''fin du jeu'''
 
-    while random3 in [random1, random2]:
-        random3 = random.randint(1, 5)
 
-    serpent = int(0)
 
-    if niveau == 1:
-        serpent = random1
-    elif niveau == 2:
-        serpent = [random1, random2]
-    elif niveau == 3:
-        serpent = [random1, random2, random3]'''
+    # ajout d'une frame
+    frame_2 = Frame(window, bg='#a41f1f')
+
+    # ajouter les écritures
+    victoire = Label(frame_2, text='!!!', background='#a41f1f', font=('courrier', 30))
+
+
+    victoir = Label(frame_2, text="Bravo tu as gagné", background='#a41f1f',
+                  font=('Arial', 15))
+
+
+    # ajout d'un bouton
+    tresor = PhotoImage(file="image/tresor.gif").subsample(1)
+    canvas_1 = Canvas(frame_2, width=550, height=510, bg="#a41f1f", bd=0, highlightthickness=0)
+    canvas_1.create_image(00, 00, anchor=NW, image=tresor)
+
+
+
+
+    # ajout d'un bouton
+    button_rejouer = Button(window, text="Rejouer", background='black', font=('Arial', 15), fg='#a41f1f', relief='raised',
+                       cursor='circle')
+
+
+
+    '''perdu'''
+
+
+
+
+    # ajout d'une frame
+    frame_3 = Frame(window, bg='#a41f1f')
+
+    # ajouter les écritures
+    bienvenue_2 = Label(frame_3, text='!!!', background='#a41f1f', font=('courrier', 30))
+
+
+    perdu = Label(frame_3, text="dommage tu as perdu", background='#a41f1f', font=('Arial', 15))
+
+
+    # ajout d'un bouton
+    tete_de_mort = PhotoImage(file="image/sticker-tete-de-mort.gif").subsample(1)
+    canvas_4 = Canvas(frame_3, width=500, height=510, bg="#a41f1f", bd=0, highlightthickness=0)
+    canvas_4.create_image(00, 00, anchor=NW, image=tete_de_mort)
+
+
+
+
+    # ajout d'un bouton
+    button_rejouer_2 = Button(frame_3, text="Rejouer", background='black', font=('Arial', 15), fg='#a41f1f', relief='raised',
+                       cursor='circle')
+
 
 
 
     def porte_1():
+        choisir_porte.destroy()
+        canvas_2_1.destroy()
+        canvas_2_2.destroy()
+        canvas_2_3.destroy()
+        canvas_2_4.destroy()
+        canvas_2_5.destroy()
+        group_image_2.destroy()
+        jarre_1.destroy()
+        jarre_2.destroy()
+        jarre_3.destroy()
+        jarre_4.destroy()
+        jarre_5.destroy()
+        group_bouton_2.destroy()
         number_choice = 1
         serpent = random.randint(1, 5)
 
         if number_choice == serpent:
-            choisir_porte.destroy()
-            per.pack(side='top')
-
+            bienvenue_2.pack()
+            perdu.pack()
+            canvas_4.pack(side='top', padx=0)
+            frame_3.pack(expand=YES)
+            button_rejouer_2.pack(expand=YES)
         else:
-            choisir_porte.destroy()
-            bravo.pack(side='top')
+            victoire.pack()
+            victoir.pack()
+            canvas_1.pack(side='right')
+            frame_2.pack(expand=YES)
+            button_rejouer.pack(expand=YES)
 
     def porte_2():
+        choisir_porte.destroy()
+        canvas_2_1.destroy()
+        canvas_2_2.destroy()
+        canvas_2_3.destroy()
+        canvas_2_4.destroy()
+        canvas_2_5.destroy()
+        group_image_2.destroy()
+        jarre_1.destroy()
+        jarre_2.destroy()
+        jarre_3.destroy()
+        jarre_4.destroy()
+        jarre_5.destroy()
+        group_bouton_2.destroy()
         number_choice = 2
         serpent = random.randint(1, 5)
 
         if number_choice == serpent:
-            print('perdu')
+            bienvenue_2.pack()
+            perdu.pack()
+            canvas_4.pack(side='top', padx=0)
+            frame_3.pack(expand=YES)
+            button_rejouer_2.pack(expand=YES)
         else:
-            print('bravo')
+            victoire.pack()
+            victoir.pack()
+            canvas_1.pack(side='right')
+            frame_2.pack(expand=YES)
+            button_rejouer.pack(expand=YES)
 
     def porte_3():
+        choisir_porte.destroy()
+        canvas_2_1.destroy()
+        canvas_2_2.destroy()
+        canvas_2_3.destroy()
+        canvas_2_4.destroy()
+        canvas_2_5.destroy()
+        group_image_2.destroy()
+        jarre_1.destroy()
+        jarre_2.destroy()
+        jarre_3.destroy()
+        jarre_4.destroy()
+        jarre_5.destroy()
+        group_bouton_2.destroy()
         number_choice = 3
         serpent = random.randint(1, 5)
 
         if number_choice == serpent:
-            print('perdu')
+            bienvenue_2.pack()
+            perdu.pack()
+            canvas_4.pack(side='top', padx=0)
+            frame_3.pack(expand=YES)
+            button_rejouer_2.pack(expand=YES)
         else:
-            print('bravo')
+            victoire.pack()
+            victoir.pack()
+            canvas_1.pack(side='right')
+            frame_2.pack(expand=YES)
+            button_rejouer.pack(expand=YES)
 
     def porte_4():
+        choisir_porte.destroy()
+        canvas_2_1.destroy()
+        canvas_2_2.destroy()
+        canvas_2_3.destroy()
+        canvas_2_4.destroy()
+        canvas_2_5.destroy()
+        group_image_2.destroy()
+        jarre_1.destroy()
+        jarre_2.destroy()
+        jarre_3.destroy()
+        jarre_4.destroy()
+        jarre_5.destroy()
+        group_bouton_2.destroy()
         number_choice = 4
         serpent = random.randint(1, 5)
 
         if number_choice == serpent:
-            print('perdu')
+            bienvenue_2.pack()
+            perdu.pack()
+            canvas_4.pack(side='top', padx=0)
+            frame_3.pack(expand=YES)
+            button_rejouer_2.pack(expand=YES)
         else:
-            print('bravo')
+            victoire.pack()
+            victoir.pack()
+            canvas_1.pack(side='right')
+            frame_2.pack(expand=YES)
+            button_rejouer.pack(expand=YES)
 
     def porte_5():
+        choisir_porte.destroy()
+        canvas_2_1.destroy()
+        canvas_2_2.destroy()
+        canvas_2_3.destroy()
+        canvas_2_4.destroy()
+        canvas_2_5.destroy()
+        group_image_2.destroy()
+        jarre_1.destroy()
+        jarre_2.destroy()
+        jarre_3.destroy()
+        jarre_4.destroy()
+        jarre_5.destroy()
+        group_bouton_2.destroy()
         number_choice = 5
         serpent = random.randint(1, 5)
 
         if number_choice == serpent:
-            print('perdu')
+            bienvenue_2.pack()
+            perdu.pack()
+            canvas_4.pack(side='top', padx=0)
+            frame_3.pack(expand=YES)
+            button_rejouer_2.pack(expand=YES)
         else:
-            print('bravo')
+            victoire.pack()
+            victoir.pack()
+            canvas_1.pack(side='right')
+            frame_2.pack(expand=YES)
+            button_rejouer.pack(expand=YES)
 
 
     # creer une frame pour les bouttons
@@ -276,7 +415,7 @@ while nbr_cle != 3:
 
 
     # ajout d'un bouton
-    button_OK = Button(window, text="OK", background='black', font=('Arial', 15), fg='#a41f1f', relief='raised',
+    button_OK = Button(window, text="jouer", background='black', font=('Arial', 15), fg='#a41f1f', relief='raised',
                        cursor='circle', command=partial(passage_a_Niveau))
     button_OK.pack(expand=YES)
 
